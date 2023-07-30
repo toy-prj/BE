@@ -1,0 +1,31 @@
+server:
+  port: 8181
+
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/movie
+    username: root
+    password: 1234
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB106Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+
+
+logging.level:
+  org.hibernate.SQL: debug
+
+# swagger setting
+springdoc:
+  swagger-ui:
+    path: /myapi.html
+
+jwt:
+  secret: F3OoYV8ZzrZexBFMhOgmEk+A3Q0dWeRVJYmV33HZvIkcOtyX9ul1aV6RzB+VdmbwaMTAVDU+pB4xrt6pcY42jA==
